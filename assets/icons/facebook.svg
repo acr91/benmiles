@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="53.333" height="53.333" viewBox="0 0 53.333 53.333">
+  <g id="Dribbble" style="mix-blend-mode: normal;isolation: isolate">
+    <path id="Ellipse_3" data-name="Ellipse 3" d="M0,26.667A26.667,26.667,0,1,1,26.667,53.333,26.667,26.667,0,0,1,0,26.667Z" fill="rgba(255,255,255,0.05)" style="mix-blend-mode: normal;isolation: isolate"/>
+    <g id="icons8_facebook" transform="translate(15 14.235)">
+      <path id="Trazado_78" data-name="Trazado 78" d="M12,3a9,9,0,1,0,9,9,9,9,0,0,0-9-9Z" fill="none" stroke="#fff" stroke-width="2"/>
+      <path id="Trazado_79" data-name="Trazado 79" d="M20.949,12.951c0-.013,0-.025,0-.038C20.953,12.925,20.95,12.938,20.949,12.951Zm-17.9-.042c0,.017.005.034.007.051C3.051,12.944,3.047,12.927,3.046,12.909Zm10.172,1.476h2.329l.366-2.366H13.218V10.726c0-.983.321-1.854,1.241-1.854h1.477V6.807A12.556,12.556,0,0,0,14.09,6.7c-2.166,0-3.436,1.144-3.436,3.75v1.574H8.427v2.366h2.227v6.5A8.921,8.921,0,0,0,12,21a9.056,9.056,0,0,0,1.218-.092Z" fill="#fff"/>
+    </g>
+  </g>
+</svg>

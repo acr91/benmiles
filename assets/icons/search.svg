@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="27.199" height="27.199" viewBox="0 0 27.199 27.199">
+  <defs>
+    <clipPath id="clip-path">
+      <path id="Bounding_box" data-name="Bounding box" d="M0,0H27.2V27.2H0Z" fill="rgba(0,0,0,0.56)" style="mix-blend-mode: normal;isolation: isolate"/>
+    </clipPath>
+  </defs>
+  <g id="search" clip-path="url(#clip-path)" style="mix-blend-mode: normal;isolation: isolate">
+    <path id="search-2" data-name="search" d="M11.673,13.26a6.754,6.754,0,0,1-1.955,1.077,6.907,6.907,0,0,1-2.352.4,7.111,7.111,0,0,1-5.227-2.139A7.111,7.111,0,0,1,0,7.366,7.111,7.111,0,0,1,2.139,2.139,7.111,7.111,0,0,1,7.366,0a7.111,7.111,0,0,1,5.227,2.139,7.111,7.111,0,0,1,2.139,5.227,6.907,6.907,0,0,1-.4,2.352,6.754,6.754,0,0,1-1.077,1.955l7.14,7.14L18.813,20.4Zm-.694-2.281a4.918,4.918,0,0,0,1.487-3.612,4.918,4.918,0,0,0-1.487-3.612A4.918,4.918,0,0,0,7.366,2.267,4.918,4.918,0,0,0,3.754,3.754,4.918,4.918,0,0,0,2.267,7.366a4.918,4.918,0,0,0,1.487,3.612,4.918,4.918,0,0,0,3.612,1.487A4.918,4.918,0,0,0,10.979,10.979Z" transform="translate(3.4 3.4)" fill="rgba(0,0,0,0.56)" style="mix-blend-mode: normal;isolation: isolate"/>
+  </g>
+</svg>

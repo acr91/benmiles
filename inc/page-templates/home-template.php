@@ -11,27 +11,34 @@ defined("ABSPATH") or die("No direct script access allowed!");
 
 get_header(); ?>
 <section class="d-flex banner bg-white">
-    <img src="<?php echo site_url(); ?>/wp-content/themes/benmiles/assets/images/banner-porsche.webp" alt="Ben Niles Podcast Banner Background" class="banner-bg-image">
+    <img src="<?php echo site_url(); ?>/wp-content/themes/benmiles/assets/images/banner-porsche.webp"
+        alt="Ben Niles Podcast Banner Background" class="banner-bg-image">
     <div class="banner-logo-title">
-        <img class="slide-in-bottom" src="<?php echo site_url(); ?>/wp-content/themes/benmiles/assets/images/banner-ben-niles.webp" alt="The Ben Niles Podcast">
+        <img class="slide-in-bottom"
+            src="<?php echo site_url(); ?>/wp-content/themes/benmiles/assets/images/banner-ben-niles.webp"
+            alt="The Ben Niles Podcast">
     </div>
     <div class="d-flex podcast-platform-list">
         <h3 class="heading-3">Watch, Listen and Subscribe</h3>
         <div class="d-flex list">
             <a href="#" class="d-flex paragraph-2 social-network-chip">
-                <img src="<?php echo site_url(); ?>/wp-content/themes/benmiles/assets/icons/icons_spotify.svg" alt="Spotify">
+                <img src="<?php echo site_url(); ?>/wp-content/themes/benmiles/assets/icons/icons_spotify.svg"
+                    alt="Spotify">
                 Spotify
             </a>
             <a href="#" class="d-flex paragraph-2 social-network-chip">
-                <img src="<?php echo site_url(); ?>/wp-content/themes/benmiles/assets/icons/icons_apple.svg" alt="Apple Podcasts">
+                <img src="<?php echo site_url(); ?>/wp-content/themes/benmiles/assets/icons/icons_apple.svg"
+                    alt="Apple Podcasts">
                 Apple
             </a>
             <a href="#" class="d-flex paragraph-2 social-network-chip">
-                <img src="<?php echo site_url(); ?>/wp-content/themes/benmiles/assets/icons/icons_youtube.svg" alt="YouTube">
+                <img src="<?php echo site_url(); ?>/wp-content/themes/benmiles/assets/icons/icons_youtube.svg"
+                    alt="YouTube">
                 Youtube
             </a>
             <a href="#" class="d-flex paragraph-2 social-network-chip">
-                <img src="<?php echo site_url(); ?>/wp-content/themes/benmiles/assets/icons/icons_soundcloud.svg" alt="SoundCloud">
+                <img src="<?php echo site_url(); ?>/wp-content/themes/benmiles/assets/icons/icons_soundcloud.svg"
+                    alt="SoundCloud">
                 Sound Clod
             </a>
         </div>
@@ -51,7 +58,9 @@ get_header(); ?>
             <div class="d-flex card-actions">
                 <a class="icon-link paragraph-1" href="">
                     Play Episode
-                    <img class="icon img-icon-38" src="<?php echo site_url(); ?>/wp-content/themes/benmiles/assets/icons/icons_play.png" alt="Play Episode">
+                    <img class="icon img-icon-38"
+                        src="<?php echo site_url(); ?>/wp-content/themes/benmiles/assets/icons/icons_play.png"
+                        alt="Play Episode">
                 </a>
             </div>
         </div>
@@ -69,7 +78,9 @@ get_header(); ?>
             <div class="d-flex card-actions">
                 <a class="icon-link paragraph-1" href="">
                     Play Episode
-                    <img class="icon img-icon-38" src="<?php echo site_url(); ?>/wp-content/themes/benmiles/assets/icons/icons_play.png" alt="Play Episode">
+                    <img class="icon img-icon-38"
+                        src="<?php echo site_url(); ?>/wp-content/themes/benmiles/assets/icons/icons_play.png"
+                        alt="Play Episode">
                 </a>
             </div>
         </div>
@@ -87,7 +98,9 @@ get_header(); ?>
             <div class="d-flex card-actions">
                 <a class="icon-link paragraph-1" href="">
                     Play Episode
-                    <img class=" icon img-icon-38" src="<?php echo site_url(); ?>/wp-content/themes/benmiles/assets/icons/icons_play.png" alt="Play Episode">
+                    <img class=" icon img-icon-38"
+                        src="<?php echo site_url(); ?>/wp-content/themes/benmiles/assets/icons/icons_play.png"
+                        alt="Play Episode">
                 </a>
             </div>
         </div>
@@ -105,14 +118,17 @@ get_header(); ?>
             <div class="d-flex card-actions">
                 <a class="icon-link paragraph-1" href="">
                     Play Episode
-                    <img class="icon img-icon-38" src="<?php echo site_url(); ?>/wp-content/themes/benmiles/assets/icons/icons_play.png" alt="Play Episode">
+                    <img class="icon img-icon-38"
+                        src="<?php echo site_url(); ?>/wp-content/themes/benmiles/assets/icons/icons_play.png"
+                        alt="Play Episode">
                 </a>
             </div>
         </div>
     </div>
 </section>
 <section class="d-flex about bg-black">
-    <img class="about-img" src="<?php echo site_url(); ?>/wp-content/themes/benmiles/assets/images/about-ben-niles.webp" alt="About Ben Niles Podcast">
+    <img class="about-img" src="<?php echo site_url(); ?>/wp-content/themes/benmiles/assets/images/about-ben-niles.webp"
+        alt="About Ben Niles Podcast">
     <h2 class="heading-1">ABOUT Benjamin</h2>
     <h3 class="heading-3">Car Guy - NCM General Manager Graduate</h3>
     <p class="paragraph-1">Benjamin Miles is an automotive professional with more than 25 years in sales management
@@ -185,69 +201,75 @@ get_header(); ?>
             </div>
         </div>
         <div class="carousel-navigation-mobile">
-                <div class="d-flex dots-container rounded-dots">
-                    <div class="dot active" data-index="1"></div>
-                    <div class="dot" data-index="2"></div>
-                    <div class="dot" data-index="3"></div>
-                    <div class="dot" data-index="4"></div>
-                    <div class="dot" data-index="5"></div>
-                    <div class="dot " data-index="6"></div>
-                </div>
-                <div class="d-flex item-info active" data-index="1">
-                    <p class="paragraph-2">Salesman, Assistant Manager, BDC Manager, Desk Manager</p>
-                    <p class="paragraph-1">Van Tyul Corp</p>
-                    <p class="paragraph-1">1999-2001</p>
-                    <p class="paragraph-1">2 YEARS, 4 MONTHS</p>
-                </div>
-                <div class="d-flex item-info" data-index="2">
-                    <p class="paragraph-2">General Sales Manager</p>
-                    <p class="paragraph-1">Nissan</p>
-                    <p class="paragraph-1">2001-2004</p>
-                    <p class="paragraph-1">2 YEARS, 4 MONTHS</p>
-                </div>
-                <div class="d-flex item-info" data-index="3">
-                    <p class="paragraph-2">General Sales Manager Suzuki</p>
-                    <p class="paragraph-1">#1 Nation in 3 locations</p>
-                    <p class="paragraph-1">2004-2008</p>
-                    <p class="paragraph-1">4 YEARS, 9 MONTHS</p>
-                </div>
-                <div class="d-flex item-info" data-index="4">
-                    <p class="paragraph-2">General Sales Manager Finance Director</p>
-                    <p class="paragraph-1">Macon, Warner Robins GA</p>
-                    <p class="paragraph-1">2009-2014</p>
-                    <p class="paragraph-1">5 YEARS, 1 MONTH</p>
-                </div>
-                <div class="d-flex item-info" data-index="5">
-                    <p class="paragraph-2">General Manager General Sales Manager </p>
-                    <p class="paragraph-1">Greater Tampa Bay Region</p>
-                    <p class="paragraph-1">2014-2025</p>
-                    <p class="paragraph-1">11 YEARS, 3 MONTHS</p>
-                </div>
-                <div class="d-flex item-info" data-index="6">
-                    <p class="paragraph-2">General Manager</p>
-                    <p class="paragraph-1">Porsche Annapolis</p>
-                    <p class="paragraph-1">MAY 2025</p>
-                    <p class="paragraph-1">6 MONTHS</p>
-                </div>
+            <div class="d-flex dots-container rounded-dots">
+                <div class="dot active" data-index="1"></div>
+                <div class="dot" data-index="2"></div>
+                <div class="dot" data-index="3"></div>
+                <div class="dot" data-index="4"></div>
+                <div class="dot" data-index="5"></div>
+                <div class="dot " data-index="6"></div>
             </div>
+            <div class="d-flex item-info active" data-index="1">
+                <p class="paragraph-2">Salesman, Assistant Manager, BDC Manager, Desk Manager</p>
+                <p class="paragraph-1">Van Tyul Corp</p>
+                <p class="paragraph-1">1999-2001</p>
+                <p class="paragraph-1">2 YEARS, 4 MONTHS</p>
+            </div>
+            <div class="d-flex item-info" data-index="2">
+                <p class="paragraph-2">General Sales Manager</p>
+                <p class="paragraph-1">Nissan</p>
+                <p class="paragraph-1">2001-2004</p>
+                <p class="paragraph-1">2 YEARS, 4 MONTHS</p>
+            </div>
+            <div class="d-flex item-info" data-index="3">
+                <p class="paragraph-2">General Sales Manager Suzuki</p>
+                <p class="paragraph-1">#1 Nation in 3 locations</p>
+                <p class="paragraph-1">2004-2008</p>
+                <p class="paragraph-1">4 YEARS, 9 MONTHS</p>
+            </div>
+            <div class="d-flex item-info" data-index="4">
+                <p class="paragraph-2">General Sales Manager Finance Director</p>
+                <p class="paragraph-1">Macon, Warner Robins GA</p>
+                <p class="paragraph-1">2009-2014</p>
+                <p class="paragraph-1">5 YEARS, 1 MONTH</p>
+            </div>
+            <div class="d-flex item-info" data-index="5">
+                <p class="paragraph-2">General Manager General Sales Manager </p>
+                <p class="paragraph-1">Greater Tampa Bay Region</p>
+                <p class="paragraph-1">2014-2025</p>
+                <p class="paragraph-1">11 YEARS, 3 MONTHS</p>
+            </div>
+            <div class="d-flex item-info" data-index="6">
+                <p class="paragraph-2">General Manager</p>
+                <p class="paragraph-1">Porsche Annapolis</p>
+                <p class="paragraph-1">MAY 2025</p>
+                <p class="paragraph-1">6 MONTHS</p>
+            </div>
+        </div>
         <div class="d-flex carousel-container">
             <div class="carousel-item active" data-item="1">
-                <img src="<?php echo site_url(); ?>/wp-content/themes/benmiles/assets/images/van_tyul.webp" alt="Ben Niles Podcast">
+                <img src="<?php echo site_url(); ?>/wp-content/themes/benmiles/assets/images/van_tyul.webp"
+                    alt="Ben Niles Podcast">
             </div>
             <div class="carousel-item" data-item="2">
-                <img src="<?php echo site_url(); ?>/wp-content/themes/benmiles/assets/images/nissan.webp" alt="Ben Niles Podcast">
+                <img src="<?php echo site_url(); ?>/wp-content/themes/benmiles/assets/images/nissan.webp"
+                    alt="Ben Niles Podcast">
             </div>
             <div class="carousel-item" data-item="3">
-                <img src="<?php echo site_url(); ?>/wp-content/themes/benmiles/assets/images/suzuki.webp" alt="Ben Niles Podcast">
+                <img src="<?php echo site_url(); ?>/wp-content/themes/benmiles/assets/images/suzuki.webp"
+                    alt="Ben Niles Podcast">
             </div>
             <div class="carousel-item" data-item="4">
-                <img src="<?php echo site_url(); ?>/wp-content/themes/benmiles/assets/images/macon_warner.webp" alt="Ben Niles Podcast">
+                <img src="<?php echo site_url(); ?>/wp-content/themes/benmiles/assets/images/macon_warner.webp"
+                    alt="Ben Niles Podcast">
             </div>
             <div class="carousel-item" data-item="5">
-                <img src="<?php echo site_url(); ?>/wp-content/themes/benmiles/assets/images/greater.webp" alt="Ben Niles Podcast">
+                <img src="<?php echo site_url(); ?>/wp-content/themes/benmiles/assets/images/greater.webp"
+                    alt="Ben Niles Podcast">
             </div>
             <div class="carousel-item porsche" data-item="6">
-                <img src="<?php echo site_url(); ?>/wp-content/themes/benmiles/assets/images/porsche.webp" alt="Ben Niles Podcast">
+                <img src="<?php echo site_url(); ?>/wp-content/themes/benmiles/assets/images/porsche.webp"
+                    alt="Ben Niles Podcast">
             </div>
         </div>
     </div>
@@ -301,8 +323,12 @@ get_header(); ?>
         </div>
         <div class="carousel-indicators">
             <div class="d-flex arrows-container">
-                <span class="arrow-back icon img-icon-38"><img src="<?php echo site_url(); ?>/wp-content/themes/benmiles/assets/icons/icons_play.png" alt=""></span>
-                <span class="arrow-next icon img-icon-38"><img src="<?php echo site_url(); ?>/wp-content/themes/benmiles/assets/icons/icons_play.png" alt=""></span>
+                <span class="arrow-back icon img-icon-38"><img
+                        src="<?php echo site_url(); ?>/wp-content/themes/benmiles/assets/icons/forward_arrow.svg"
+                        alt=""></span>
+                <span class="arrow-next icon img-icon-38"><img
+                        src="<?php echo site_url(); ?>/wp-content/themes/benmiles/assets/icons/forward_arrow.svg"
+                        alt=""></span>
             </div>
             <div class="dots-container">
             </div>
@@ -320,22 +346,28 @@ get_header(); ?>
         <div class="d-flex actions-list">
             <p class="viewers-info paragraph-1">3.3K listeners</p>
             <a href="" class="btn btn-tertiary">BE A GUEST</a>
-            <a href="#" class="d-flex paragraph-2 social-network-chip">
-                <img src="<?php echo site_url(); ?>/wp-content/themes/benmiles/assets/icons/icons_spotify.svg" alt="Spotify">
-                Spotify
-            </a>
-            <a href="#" class="d-flex paragraph-2 social-network-chip">
-                <img src="<?php echo site_url(); ?>/wp-content/themes/benmiles/assets/icons/icons_apple.svg" alt="Apple Podcasts">
-                Apple
-            </a>
-            <a href="#" class="d-flex paragraph-2 social-network-chip">
-                <img src="<?php echo site_url(); ?>/wp-content/themes/benmiles/assets/icons/icons_youtube.svg" alt="YouTube">
-                Youtube
-            </a>
-            <a href="#" class="d-flex paragraph-2 social-network-chip">
-                <img src="<?php echo site_url(); ?>/wp-content/themes/benmiles/assets/icons/icons_soundcloud.svg" alt="SoundCloud">
-                Sound Clod
-            </a>
+            <div class="d-flex streaming-platforms">
+                <a href="#" class="d-flex paragraph-2 social-network-chip">
+                    <img src="<?php echo site_url(); ?>/wp-content/themes/benmiles/assets/icons/icons_spotify.svg"
+                        alt="Spotify">
+                    Spotify
+                </a>
+                <a href="#" class="d-flex paragraph-2 social-network-chip">
+                    <img src="<?php echo site_url(); ?>/wp-content/themes/benmiles/assets/icons/icons_apple.svg"
+                        alt="Apple Podcasts">
+                    Apple
+                </a>
+                <a href="#" class="d-flex paragraph-2 social-network-chip">
+                    <img src="<?php echo site_url(); ?>/wp-content/themes/benmiles/assets/icons/icons_youtube.svg"
+                        alt="YouTube">
+                    Youtube
+                </a>
+                <a href="#" class="d-flex paragraph-2 social-network-chip">
+                    <img src="<?php echo site_url(); ?>/wp-content/themes/benmiles/assets/icons/icons_soundcloud.svg"
+                        alt="SoundCloud">
+                    Sound Clod
+                </a>
+            </div>
         </div>
     </div>
 </section>
@@ -343,23 +375,33 @@ get_header(); ?>
     <h2 class="heading-1">Gallery</h2>
     <div id="gallery-carousel" class="gallery-carousel">
         <div class="d-flex carousel-container">
-            <img class="carousel-item" data-item="1" src="<?php echo site_url(); ?>/wp-content/themes/benmiles/assets/images/gallery_1.webp"
+            <img class="carousel-item" data-item="1"
+                src="<?php echo site_url(); ?>/wp-content/themes/benmiles/assets/images/gallery_1.webp"
                 alt="Ben Niles Podcast Gallery">
-            <img class="carousel-item" data-item="2" src="<?php echo site_url(); ?>/wp-content/themes/benmiles/assets/images/gallery_2.webp"
+            <img class="carousel-item" data-item="2"
+                src="<?php echo site_url(); ?>/wp-content/themes/benmiles/assets/images/gallery_2.webp"
                 alt="Ben Niles Podcast Gallery">
-            <img class="carousel-item" data-item="3" src="<?php echo site_url(); ?>/wp-content/themes/benmiles/assets/images/gallery_3.webp"
+            <img class="carousel-item" data-item="3"
+                src="<?php echo site_url(); ?>/wp-content/themes/benmiles/assets/images/gallery_3.webp"
                 alt="Ben Niles Podcast Gallery">
-            <img class="carousel-item active" data-item="4" src="<?php echo site_url(); ?>/wp-content/themes/benmiles/assets/images/gallery_4.webp"
+            <img class="carousel-item active" data-item="4"
+                src="<?php echo site_url(); ?>/wp-content/themes/benmiles/assets/images/gallery_4.webp"
                 alt="Ben Niles Podcast Gallery">
-            <img class="carousel-item" data-item="5" src="<?php echo site_url(); ?>/wp-content/themes/benmiles/assets/images/gallery_5.webp"
+            <img class="carousel-item" data-item="5"
+                src="<?php echo site_url(); ?>/wp-content/themes/benmiles/assets/images/gallery_5.webp"
                 alt="Ben Niles Podcast Gallery">
-            <img class="carousel-item" data-item="6" src="<?php echo site_url(); ?>/wp-content/themes/benmiles/assets/images/gallery_6.webp"
+            <img class="carousel-item" data-item="6"
+                src="<?php echo site_url(); ?>/wp-content/themes/benmiles/assets/images/gallery_6.webp"
                 alt="Ben Niles Podcast Gallery">
         </div>
         <div class="d-flex carousel-indicators">
             <div class="d-flex arrows-container">
-                <span class="arrow-back icon img-icon-38"><img src="<?php echo site_url(); ?>/wp-content/themes/benmiles/assets/icons/icons_play.png" alt=""></span>
-                <span class="arrow-next icon img-icon-38"><img src="<?php echo site_url(); ?>/wp-content/themes/benmiles/assets/icons/icons_play.png" alt=""></span>
+                <span class="arrow-back icon img-icon-38"><img
+                        src="<?php echo site_url(); ?>/wp-content/themes/benmiles/assets/icons/forward_arrow.svg"
+                        alt=""></span>
+                <span class="arrow-next icon img-icon-38"><img
+                        src="<?php echo site_url(); ?>/wp-content/themes/benmiles/assets/icons/forward_arrow.svg"
+                        alt=""></span>
             </div>
             <div class="d-flex dots-container">
                 <div class="dot" data-index="1"></div>

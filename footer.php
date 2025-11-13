@@ -26,7 +26,7 @@
             <h4 class="heading-4">Phone Number</h4>
             <p class="paragraph-1"><a href="tel:+18005559473">+1 (800) 555-9473</a></p>
         </div>
-        <div class="d-flex">
+        <div class="d-flex footer-menu-container">
             <h4 class="heading-4">Explore</h4>
             <ul role="navigation">
                 <li><a class="paragraph-1" href="#banner">About Ben Miles</a></li>
@@ -36,7 +36,7 @@
                 <li><a class="paragraph-1" href="#gallery">Newsletter</a></li>
             </ul>
         </div>
-        <div class="d-flex">
+        <div class="d-flex footer-menu-container">
             <h4 class="heading-4">Resources</h4>
             <ul role="navigation">
                 <li><a class="paragraph-1" href="#banner">Help Center</a></li>

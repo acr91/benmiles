@@ -4,83 +4,92 @@ const headerLogo = document.querySelector(".header-logo");
 const menuButton = document.querySelector(".navigation-toggler");
 
 let current = 0;
+const INITIAL_WIDTH = 1640;
 let isAnimating = false;
+let pageHeight = window.innerHeight;
+let pageWidth = window.innerWidth;
 
-const ANIM_TIME = 300; // must match CSS transition time
+if (pageWidth > INITIAL_WIDTH) {
+  const ANIM_TIME = 300; // must match CSS transition time
 
-showPage(current);
-
-// Set body height to emulate "virtual scroll"
-function setScrollHeight() {
-  document.body.style.height = `${pages.length * window.innerHeight}px`;
-}
-setScrollHeight();
-
-function showPage(i) {
-  // Display header form or logo based on section
-  const isBanner = pages[i].classList.contains("banner");
-  const haveBgBlack = pages[i].classList.contains("bg-black");
-  searchForm.style.display = isBanner ? "block" : "none";
-  headerLogo.style.display = isBanner ? "none" : "block";
-  menuButton.style.filter = haveBgBlack ? "invert(1)" : "invert(0)";
-
-  pages.forEach((p) => p.classList.remove("active"));
-  pages[i].classList.add("active");
-}
-
-function goToPage(index) {
-  if (isAnimating || index === current || index < 0 || index >= pages.length)
-    return;
-
-  isAnimating = true;
-  current = index;
   showPage(current);
 
-  setTimeout(() => {
-    isAnimating = false;
-  }, ANIM_TIME);
-}
+  // Set body height to emulate "virtual scroll"
+  // function setScrollHeight() {
+  //   document.body.style.height = `${pages.length * window.innerHeight}px`;
+  // }
+  // setScrollHeight();
 
-function nextPage() {
-  goToPage(current + 1);
-}
+  window.addEventListener("resize", () => {
+    pageHeight = window.innerHeight;
+    setScrollHeight();
+  });
 
-function prevPage() {
-  goToPage(current - 1);
-}
+  function showPage(i) {
+    // Display header form or logo based on section
+    const isBanner = pages[i].classList.contains("banner");
+    const haveBgBlack = pages[i].classList.contains("bg-black");
+    searchForm.style.display = isBanner ? "block" : "none";
+    headerLogo.style.display = isBanner ? "none" : "block";
+    menuButton.style.filter = haveBgBlack ? "invert(1)" : "invert(0)";
 
-// Event listeners for mouse wheel navigation
-window.addEventListener(
-  "wheel",
-  (e) => {
-    if (e.deltaY > 0) nextPage();
+    pages.forEach((p) => p.classList.remove("active"));
+    pages[i].classList.add("active");
+  }
+
+  function goToPage(index) {
+    if (isAnimating || index === current || index < 0 || index >= pages.length)
+      return;
+
+    isAnimating = true;
+    current = index;
+    showPage(current);
+
+    setTimeout(() => {
+      isAnimating = false;
+    }, ANIM_TIME);
+  }
+
+  function nextPage() {
+    goToPage(current + 1);
+  }
+
+  function prevPage() {
+    goToPage(current - 1);
+  }
+
+  // Event listeners for mouse wheel navigation
+  window.addEventListener(
+    "wheel",
+    (e) => {
+      if (e.deltaY > 0) nextPage();
+      else prevPage();
+    },
+    { passive: true }
+  );
+
+  // Event listeners for keyboard navigation
+  window.addEventListener("keydown", (e) => {
+    if (e.key === "ArrowDown") nextPage();
+    if (e.key === "ArrowUp") prevPage();
+  });
+
+  // Event listeners for touch navigation
+  let touchStartY = 0;
+
+  window.addEventListener("touchstart", (e) => {
+    touchStartY = e.changedTouches[0].clientY;
+  });
+
+  window.addEventListener("touchend", (e) => {
+    let endY = e.changedTouches[0].clientY;
+    let diff = touchStartY - endY;
+
+    if (Math.abs(diff) < 50) return; // threshold
+    if (diff > 0) nextPage();
     else prevPage();
-  },
-  { passive: true }
-);
-
-// Event listeners for keyboard navigation
-window.addEventListener("keydown", (e) => {
-  if (e.key === "ArrowDown") nextPage();
-  if (e.key === "ArrowUp") prevPage();
-});
-
-// Event listeners for touch navigation
-let touchStartY = 0;
-
-window.addEventListener("touchstart", (e) => {
-  touchStartY = e.changedTouches[0].clientY;
-});
-
-window.addEventListener("touchend", (e) => {
-  let endY = e.changedTouches[0].clientY;
-  let diff = touchStartY - endY;
-
-  if (Math.abs(diff) < 50) return; // threshold
-  if (diff > 0) nextPage();
-  else prevPage();
-});
-
+  });
+}
 //Work history carousel
 const workHistoryCarousel = document.querySelector("#work-history-carousel");
 const dots = workHistoryCarousel.querySelectorAll(".dot");

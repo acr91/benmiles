@@ -1,6 +1,6 @@
 === Ben Miles ===
 
-Contributors: Your Name
+Contributors: Alexander Cutiño Rivera
 Requires at least: 5.0
 Tested up to: 6.4
 Requires PHP: 7.4
@@ -10,7 +10,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 == Description ==
 
-Ben Miles is a modern and clean WordPress theme designed for Palermo Casa Deco. It features a responsive design, custom menus, widget areas, and full support for the WordPress block editor.
+Ben Miles is a modern and clean WordPress theme designed for Ben Miles. It features a responsive design, custom menus, widget areas, and full support for the WordPress block editor.
 
 == Features ==
 
@@ -20,7 +20,6 @@ Ben Miles is a modern and clean WordPress theme designed for Palermo Casa Deco. 
 * Widget areas (Sidebar & Footer)
 * Post thumbnails
 * HTML5 markup
-* WooCommerce support
 * Translation ready
 
 == Installation ==

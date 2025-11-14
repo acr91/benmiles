@@ -36,7 +36,10 @@
             <form class="search-form" action="">
                 <input id="search" type="text" class="search-input" placeholder="Search">
             </form>
-            <div class="header-logo">
+            <div class="header-logo black">
+                <img src="<?php echo site_url(); ?>/wp-content/themes/benmiles/assets/images/logo-header-black.svg" alt="Ben Niles Podcast">
+            </div>
+            <div class="header-logo white">
                 <img src="<?php echo site_url(); ?>/wp-content/themes/benmiles/assets/images/logo-header.png" alt="Ben Niles Podcast">
             </div>
         </div>

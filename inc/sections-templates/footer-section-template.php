@@ -1,4 +1,4 @@
-<footer id="contact-anchor" class=" d-flex bg-black contact">
+footer id="contact-anchor" class=" d-flex bg-black contact">
     <h2 class="heading-1 ">Contact</h2>
     <h3 class="heading-3">What do you want to know, Ben will help you</h3>
     <form id="contact-form" action="" class="d-flex contact-form">
@@ -28,27 +28,21 @@
         </div>
         <div class="d-flex footer-menu-container">
             <h4 class="heading-4">Explore</h4>
-            <?php
-            wp_nav_menu(array(
-                'theme_location' => 'explore',
-                'container' => false,
-                'menu_class' => '',
-                'items_wrap' => '<ul role="navigation">%3$s</ul>',
-                'fallback_cb' => false
-            ));
-            ?>
+            <ul role="navigation">
+                <li><a class="paragraph-1" href="#about-anchor">About Ben Miles</a></li>
+                <li><a class="paragraph-1" href="#blog-anchor">Our Blog</a></li>
+                <!-- <li><a class="paragraph-1" href="#blog">Episodes</a></li> -->
+                <li><a class="paragraph-1" href="#latest-podcasts-anchor">Reviews</a></li>
+                <!-- <li><a class="paragraph-1" href="#gallery">Newsletter</a></li> -->
+            </ul>
         </div>
         <div class="d-flex footer-menu-container">
             <h4 class="heading-4">Resources</h4>
-            <?php
-            wp_nav_menu(array(
-                'theme_location' => 'resources',
-                'container' => false,
-                'menu_class' => '',
-                'items_wrap' => '<ul role="navigation">%3$s</ul>',
-                'fallback_cb' => false
-            ));
-            ?>
+            <ul role="navigation">
+                <li><a class="paragraph-1" href="#">Help Center</a></li>
+                <li><a class="paragraph-1" href="#contact-anchor">Be a Guest</a></li>
+                <li><a class="paragraph-1" href="#contact-anchor">Contact Support</a></li>
+            </ul>
         </div>
         <div class="d-flex about-podcast">
             <h4 class="heading-4">The Ben Miles Podcast</h4>

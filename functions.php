@@ -27,7 +27,8 @@ function benmiles_setup() {
     register_nav_menus(
         array(
             'primary' => esc_html__( 'Primary Menu', 'benmiles' ),
-            'footer'  => esc_html__( 'Footer Menu', 'benmiles' ),
+            'explore'  => esc_html__( 'Explore Footer Menu', 'benmiles' ),
+            'resources'  => esc_html__( 'Resources Footer Menu', 'benmiles' )
         )
     );
 
@@ -145,6 +146,16 @@ add_filter( 'excerpt_more', 'benmiles_excerpt_more' );
  */
 require get_template_directory() . '/inc/template-tags.php';
 
+/**
+ * Load Gallery post type
+ */
+require get_template_directory() . '/inc/post-types/gallery-post-type.php';
+
+/**
+ * Load customizable theme options
+ */
+require get_template_directory() . '/inc/customizable_configs/configs.php';
+
 function register_custom_page_templates($templates)
 {
     // Define the directory where your templates are stored
@@ -201,3 +212,11 @@ function debug_template_loading($template) {
     return $template;
 }
 add_filter('template_include', 'debug_template_loading', 999);
+
+function add_menu_link_class($atts, $item, $args) {
+    if ($args->theme_location === 'explore' || $args->theme_location === 'resources') {
+        $atts['class'] = 'paragraph-1';
+    }
+    return $atts;
+}
+add_filter('nav_menu_link_attributes', 'add_menu_link_class', 10, 3);

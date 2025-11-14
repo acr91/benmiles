@@ -10,7 +10,7 @@ defined("ABSPATH") or die("No direct script access allowed!");
  */
 
 get_header(); ?>
-<section class="d-flex banner bg-white">
+<section id="banner-anchor" class="d-flex banner bg-white">
     <img src="<?php echo site_url(); ?>/wp-content/themes/benmiles/assets/images/banner-porsche.webp"
         alt="Ben Niles Podcast Banner Background" class="banner-bg-image">
     <div class="banner-logo-title">
@@ -126,7 +126,7 @@ get_header(); ?>
         </div>
     </div>
 </section>
-<section class="d-flex about bg-black">
+<section id="about-anchor" class="d-flex about bg-black">
     <img class="about-img" src="<?php echo site_url(); ?>/wp-content/themes/benmiles/assets/images/about-ben-niles.webp"
         alt="About Ben Niles Podcast">
     <h2 class="heading-1">ABOUT Benjamin</h2>
@@ -274,52 +274,46 @@ get_header(); ?>
         </div>
     </div>
 </section>
-<section class="d-flex blog bg-gray">
+<section id="blog-anchor" class="d-flex blog bg-gray">
     <h2 class="heading-1">Blog</h2>
     <div id="blog-carousel" class="blog-carousel">
         <div class="d-flex carousel-container">
-            <article data-item="1" class="d-flex  carousel-item active"
-                style="background-image: url('<?php echo site_url(); ?>/wp-content/themes/benmiles/assets/images/article_2.webp');">
-                <div class="d-flex article-heading">
-                    <span class="article-category paragraph-2">INDUSTRY INSIGHTS</span>
-                    <h3 class="heading-2">POWER UNDER CONTROL</h3>
-                </div>
-                <div class="d-flex article-content">
-                    <p class="paragraph-1 article-excerpt">
-                        Experience a new era of automotive innovation—where cutting-edge technology meets timeless
-                        design. From intelligent systems.
-                    </p>
-                    <a href="" class="btn btn-tertiary">Explore</a>
-                </div>
-            </article>
-            <article data-item="2" class="d-flex carousel-item"
-                style="background-image: url('<?php echo site_url(); ?>/wp-content/themes/benmiles/assets/images/article_1.webp');">
-                <div class="d-flex article-heading">
-                    <span class="article-category paragraph-2">DRIVING EXPERIENCES</span>
-                    <h3 class="heading-2">BUILT TO PERFORM. DESIGNED TO IMPRESS.</h3>
-                </div>
-                <div class="d-flex article-content">
-                    <p class="paragraph-1 article-excerpt">
-                        Every detail is engineered with purpose—from raw power under the hood to the sleek contours
-                        of its design.
-                    </p>
-                    <a href="" class="btn btn-tertiary">Explore</a>
-                </div>
-            </article>
-            <article data-item="2" class="d-flex carousel-item"
-                style="background-image: url('<?php echo site_url(); ?>/wp-content/themes/benmiles/assets/images/article_3.webp');">
-                <div class="d-flex article-heading">
-                    <span class="article-category paragraph-2">DRIVING EXPERIENCES</span>
-                    <h3 class="heading-2">BUILT TO PERFORM. DESIGNED TO IMPRESS.</h3>
-                </div>
-                <div class="d-flex article-content">
-                    <p class="paragraph-1 article-excerpt">
-                        Every detail is engineered with purpose—from raw power under the hood to the sleek contours
-                        of its design.
-                    </p>
-                    <a href="" class="btn btn-tertiary">Explore</a>
-                </div>
-            </article>
+            <?php
+            $args = array(
+                'post_type' => 'post',
+                'posts_per_page' => 6,
+                'post_status' => 'publish'
+            );
+            $blog_query = new WP_Query($args);
+            $item_index = 1;
+
+            if ($blog_query->have_posts()):
+                while ($blog_query->have_posts()):
+                    $blog_query->the_post();
+                    $category = get_the_category();
+                    $category_name = !empty($category) ? esc_html($category[0]->name) : 'UNCATEGORIZED';
+                    $featured_image = get_the_post_thumbnail_url(get_the_ID(), 'full');
+                    $active_class = ($item_index === 1) ? 'active' : '';
+                    ?>
+                    <article data-item="<?php echo $item_index; ?>" class="d-flex carousel-item <?php echo $active_class; ?>"
+                        style="background-image: url('<?php echo esc_url($featured_image); ?>');">
+                        <div class="d-flex article-heading">
+                            <span class="article-category paragraph-2"><?php echo strtoupper($category_name); ?></span>
+                            <h3 class="heading-2"><?php echo get_the_title(); ?></h3>
+                        </div>
+                        <div class="d-flex article-content">
+                            <p class="paragraph-1 article-excerpt">
+                                <?php echo wp_trim_words(get_the_excerpt(), 20, '...'); ?>
+                            </p>
+                            <a href="<?php echo get_permalink(); ?>" class="btn btn-tertiary">Explore</a>
+                        </div>
+                    </article>
+                    <?php
+                    $item_index++;
+                endwhile;
+                wp_reset_postdata();
+            endif;
+            ?>
         </div>
         <div class="carousel-indicators">
             <div class="d-flex arrows-container">
@@ -335,7 +329,7 @@ get_header(); ?>
         </div>
     </div>
 </section>
-<section class="d-flex latest-podcasts bg-black">
+<section id="latest-podcasts-anchor" class="d-flex latest-podcasts bg-black">
     <h2 class="heading-1">Latest Podcasts</h2>
     <iframe src="https://www.youtube.com/embed/2EbCJgmrh8o?si=Gr0hglcFKV6dLvTT" frameborder="0"></iframe>
     <div class="d-flex podcast-actions">
@@ -375,24 +369,31 @@ get_header(); ?>
     <h2 class="heading-1">Gallery</h2>
     <div id="gallery-carousel" class="gallery-carousel">
         <div class="d-flex carousel-container">
-            <img class="carousel-item" data-item="1"
-                src="<?php echo site_url(); ?>/wp-content/themes/benmiles/assets/images/gallery_1.webp"
-                alt="Ben Niles Podcast Gallery">
-            <img class="carousel-item" data-item="2"
-                src="<?php echo site_url(); ?>/wp-content/themes/benmiles/assets/images/gallery_2.webp"
-                alt="Ben Niles Podcast Gallery">
-            <img class="carousel-item" data-item="3"
-                src="<?php echo site_url(); ?>/wp-content/themes/benmiles/assets/images/gallery_3.webp"
-                alt="Ben Niles Podcast Gallery">
-            <img class="carousel-item active" data-item="4"
-                src="<?php echo site_url(); ?>/wp-content/themes/benmiles/assets/images/gallery_4.webp"
-                alt="Ben Niles Podcast Gallery">
-            <img class="carousel-item" data-item="5"
-                src="<?php echo site_url(); ?>/wp-content/themes/benmiles/assets/images/gallery_5.webp"
-                alt="Ben Niles Podcast Gallery">
-            <img class="carousel-item" data-item="6"
-                src="<?php echo site_url(); ?>/wp-content/themes/benmiles/assets/images/gallery_6.webp"
-                alt="Ben Niles Podcast Gallery">
+            <?php
+            $gallery_args = array(
+                'post_type' => 'gallery',
+                'posts_per_page' => -1,
+                'post_status' => 'publish',
+                'orderby' => 'date',
+                'order' => 'DESC'
+            );
+            $gallery_query = new WP_Query($gallery_args);
+            $gallery_index = 1;
+
+            if ($gallery_query->have_posts()):
+                while ($gallery_query->have_posts()):
+                    $gallery_query->the_post();
+                    $gallery_image = get_the_post_thumbnail_url(get_the_ID(), 'full');
+                    $active_class = ($gallery_index === 1) ? 'active' : '';
+                    ?>
+                    <img class="carousel-item <?php echo $active_class; ?>" data-item="<?php echo $gallery_index; ?>"
+                        src="<?php echo esc_url($gallery_image); ?>" alt="<?php echo esc_attr(get_the_title()); ?>">
+                    <?php
+                    $gallery_index++;
+                endwhile;
+                wp_reset_postdata();
+            endif;
+            ?>
         </div>
         <div class="d-flex carousel-indicators">
             <div class="d-flex arrows-container">
@@ -404,12 +405,19 @@ get_header(); ?>
                         alt=""></span>
             </div>
             <div class="d-flex dots-container">
-                <div class="dot" data-index="1"></div>
-                <div class="dot" data-index="2"></div>
-                <div class="dot" data-index="3"></div>
-                <div class="dot active" data-index="4"></div>
-                <div class="dot" data-index="5"></div>
-                <div class="dot " data-index="6"></div>
+                <?php
+                $gallery_query->rewind_posts();
+                $dot_index = 1;
+                while ($gallery_query->have_posts()):
+                    $gallery_query->the_post();
+                    $active_dot = ($dot_index === 1) ? 'active' : '';
+                    ?>
+                    <div class="dot <?php echo $active_dot; ?>" data-index="<?php echo $dot_index; ?>"></div>
+                    <?php
+                    $dot_index++;
+                endwhile;
+                wp_reset_postdata();
+                ?>
             </div>
         </div>
     </div>

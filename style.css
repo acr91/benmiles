@@ -2,9 +2,9 @@
 Theme Name: Ben Miles
 Theme URI: https://example.com/benmiles
 Author: Alexander Cutiño Rivera
-Author URI: https://example.com
+Author URI: https://www.linkedin.com/in/ing-alexander-cutino-rivera/
 Description: A modern and clean WordPress theme for Ben Miles
-Version: 1.0.2
+Version: 1.0.3
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: benmiles
@@ -39,15 +39,17 @@ ol[role='list'] {
 }
 
 /* Set core root defaults */
-html:focus-within {
+html:focus-within,
+html {
     scroll-behavior: smooth;
 }
 
 /* Set core height defaults */
 body,
 html {
-    height  : 100%;
-    overflow: hidden;
+    height         : 100%;
+    /* Uncomment to enable 100dvw / 100dvh behavior */
+    /* overflow    : hidden; */
 }
 
 /* Body defaults */
@@ -372,6 +374,7 @@ textarea {
 /* [SECTIONS] */
 section,
 footer {
+    margin    : 0 auto;
     max-width : 1920px;
     padding   : 0 var(--section-padding-right) 0 var(--section-padding-left);
     width     : 100%;
@@ -390,6 +393,28 @@ footer {
 }
 
 /* [KEYFRAMES] */
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+
+}
+
+@keyframes fade-out {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+
+}
+
 @keyframes slide-in-right {
     from {
         transform: translateX(100%);
@@ -451,28 +476,55 @@ footer {
 }
 
 header {
-    position       : absolute;
+    position       : fixed;
     top            : 0;
     left           : 0;
-    right          : 0;
     height         : 90px;
     background     : transparent;
     z-index        : 10;
     align-items    : center;
     justify-content: space-between;
+    width          : 100%;
+    margin         : 0 auto;
     padding        : 0 var(--section-padding-right) 0 var(--section-padding-left);
+
+    &.scrolling::after {
+        content        : '';
+        left           : 0;
+        top            : 0;
+        position       : absolute;
+        height         : 100%;
+        width          : 100%;
+        background     : rgba(0, 0, 0, 0.13);
+        backdrop-filter: blur(1px);
+        z-index        : -1;
+        animation      : fade-in 0.5s ease forwards;
+    }
 
     &>div {
         flex-basis: 50%;
     }
 
     .header-logo {
+        display    : none;
         margin-left: 4.5rem;
+        transition : all 0.5ss ease;
 
         img {
             height: 65px;
         }
     }
+
+    &.over-black svg {
+        fill: var(--clr-white-000);
+    }
+
+    &.over-black .header-logo.white,
+    &.over-gray .header-logo.black {
+        display: block;
+    }
+
+
 
     .navigation-options {
         align-items: center;
@@ -520,6 +572,7 @@ header {
 .banner {
     --chapters-gap     : 1rem;
     --platform-list-gap: 1rem;
+    overflow           : hidden;
 
     padding-top   : 150px;
     flex-direction: column;
@@ -1146,6 +1199,7 @@ header {
         position       : relative;
         padding-top    : 2.8rem;
         justify-content: space-between;
+        overflow       : hidden;
 
         &>div {
             flex-direction: column;
@@ -1183,8 +1237,9 @@ header {
         --section-padding-right: 140px;
     }
 
+    /* Uncomment to enable 100dvw / 100dvh behavior */
     /* [SECTIONS] */
-    section,
+    /* section,
     footer {
         height        : 100dvh;
         position      : absolute;
@@ -1205,7 +1260,7 @@ header {
             opacity       : 1;
             pointer-events: auto;
         }
-    }
+    } */
 
     header {
         padding-left: 50px;
@@ -1236,11 +1291,6 @@ header {
 }
 
 @media screen and (width<1640px) {
-
-    body,
-    html {
-        overflow-y: visible;
-    }
 
     header {
         .search-form {
@@ -1300,6 +1350,27 @@ header {
             }
         }
     }
+
+    .contact {
+
+        .paragraph-1 {
+            max-width: 20ch;
+        }
+
+        .footer-navigation {
+            .social-links-container {
+                gap: 1.18rem;
+            }
+        }
+    }
+}
+
+@media screen and (width<1350px) {
+    .contact {
+        .footer-menu-container {
+            display: none;
+        }
+    }
 }
 
 @media screen and (width<992px) {
@@ -1317,7 +1388,6 @@ header {
     }
 
     header {
-        position: sticky;
 
         .header-logo {
             position : absolute;
@@ -1328,10 +1398,12 @@ header {
             img {
                 height: 38px;
             }
-        }
-    }
 
-    header {
+            &.black {
+                display: block;
+            }
+        }
+
         .search-form {
             display: none !important;
         }
@@ -1564,6 +1636,10 @@ header {
             max-width  : 22ch;
         }
 
+        .paragraph-1 {
+            max-width: 35ch;
+        }
+
         form {
             .fb-50 {
                 flex-basis: 100%;
@@ -1597,7 +1673,6 @@ header {
             .social-links-container {
                 margin-top     : 1.875rem;
                 justify-content: center;
-                gap            : 1.18rem;
             }
         }
     }

@@ -18,33 +18,38 @@
     <?php wp_body_open(); ?>
 
     <header class="d-flex">
-        <div class="d-flex navigation-options">
-            <button class="btn navigation-toggler" type="button" aria-expanded="false" aria-label="Toggle navigation">
-                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"
-                    role="img">
-                    <rect x="3" y="5" width="30" height="2" rx="1"></rect>
-                    <rect x="3" y="15" width="30" height="2" rx="1"></rect>
-                    <rect x="3" y="25" width="30" height="2" rx="1"></rect>
-                </svg>
-            </button>
-            <!--<nav>
+        <div class="d-flex section-container">
+            <div class="d-flex navigation-options">
+                <button class="btn navigation-toggler" type="button" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"
+                        aria-hidden="true" role="img">
+                        <rect x="3" y="5" width="30" height="2" rx="1"></rect>
+                        <rect x="3" y="15" width="30" height="2" rx="1"></rect>
+                        <rect x="3" y="25" width="30" height="2" rx="1"></rect>
+                    </svg>
+                </button>
+                <!--<nav>
                 <ul>
                     <li><a href="#banner">Home</a></li>
                     <li><a href="#about">About</a></li>
                 </ul>
             </nav> -->
-            <form class="search-form" action="">
-                <input id="search" type="text" class="search-input" placeholder="Search">
-            </form>
-            <div class="header-logo black">
-                <img src="<?php echo site_url(); ?>/wp-content/themes/benmiles/assets/images/logo-header-black.svg" alt="Ben Niles Podcast">
+                <form class="search-form" action="">
+                    <input id="search" type="text" class="search-input" placeholder="Search">
+                </form>
+                <div class="header-logo black">
+                    <img src="<?php echo site_url(); ?>/wp-content/themes/benmiles/assets/images/logo-header-black.svg"
+                        alt="Ben Niles Podcast">
+                </div>
+                <div class="header-logo white">
+                    <img src="<?php echo site_url(); ?>/wp-content/themes/benmiles/assets/images/logo-header.png"
+                        alt="Ben Niles Podcast">
+                </div>
             </div>
-            <div class="header-logo white">
-                <img src="<?php echo site_url(); ?>/wp-content/themes/benmiles/assets/images/logo-header.png" alt="Ben Niles Podcast">
+            <div class="d-flex actions">
+                <button class="btn btn-primary desktop">CONTACT / WORK WITH ME</button>
+                <button class="btn btn-primary mobile">CONTACT</button>
             </div>
-        </div>
-        <div class="d-flex actions">
-            <button class="btn btn-primary desktop">CONTACT / WORK WITH ME</button>
-            <button class="btn btn-primary mobile">CONTACT</button>
         </div>
     </header>

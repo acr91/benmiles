@@ -1,6 +1,7 @@
 const pages = document.querySelectorAll("section, footer");
 const searchForm = document.querySelector(".search-form");
 const header = document.querySelector("header");
+const headerContainer = header.querySelector(".section-container");
 const headerLogo = document.querySelector(".header-logo");
 const menuButton = document.querySelector(".navigation-toggler");
 
@@ -18,8 +19,11 @@ window.addEventListener("scroll", () => {
       // Display header form or logo based on section
       const isBanner = section.classList.contains("banner");
       if (isBanner) {
-        header.classList.remove("over-black", "over-gray");
+        searchForm.style.display = "block";
+        headerContainer.classList.remove("over-black", "over-gray");
         return;
+      } else {
+        searchForm.style.display = "none";
       }
 
       const isBgBlack = section.classList.contains("bg-black");
@@ -27,17 +31,17 @@ window.addEventListener("scroll", () => {
         section.classList.contains("bg-gray") ||
         section.classList.contains("bg-white");
 
-      header.classList.toggle("over-black", isBgBlack);
-      header.classList.toggle("over-gray", isBgGray);
+      headerContainer.classList.toggle("over-black", isBgBlack);
+      headerContainer.classList.toggle("over-gray", isBgGray);
     }
   });
 });
 
-let current = 0;
-let pageHeight = window.innerHeight;
-let pageWidth = window.innerWidth;
-let isAnimating = false;
 // Uncomment to enable 100dvw / 100dvh behavior
+// let current = 0;
+// let pageHeight = window.innerHeight;
+// let pageWidth = window.innerWidth;
+// let isAnimating = false;
 // if (pageWidth > INITIAL_WIDTH) {
 //   const ANIM_TIME = 300; // must match CSS transition time
 

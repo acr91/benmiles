@@ -2,7 +2,9 @@
     <div class="d-flex section-container">
         <h2 class="heading-1 ">Contact</h2>
         <h3 class="heading-3">What do you want to know, Ben will help you</h3>
-        <?php echo do_shortcode('[contact-form-7 id="873edd4" title="Contact form 1"]'); ?>
+        <!-- LOCAL: [contact-form-7 id="873edd4" title="Contact form 1"] -->
+         <!-- ONLINE: [contact-form-7 id="e26bbd1" title="Footer Contact form"] -->
+        <?php echo do_shortcode('[contact-form-7 id="e26bbd1" title="Footer Contact form"]'); ?>
         <!-- <form id="contact-form" action="" class="d-flex contact-form">
             <input type="text" name="name" class="fb-50" placeholder="Name:">
             <input type="text" name="nickname" class="fb-50" placeholder="Nick Name">

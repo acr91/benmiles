@@ -4,7 +4,7 @@ Theme URI: https://example.com/benmiles
 Author: Alexander Cutiño Rivera
 Author URI: https://www.linkedin.com/in/ing-alexander-cutino-rivera/
 Description: A modern and clean WordPress theme for Ben Miles
-Version: 1.0.5
+Version: 1.0.8
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: benmiles
@@ -34,7 +34,9 @@ Tags: responsive, modern, blog
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
 ul[role='list'],
-ol[role='list'] {
+ol[role='list'],
+ul,
+ol {
     list-style: none;
 }
 
@@ -516,6 +518,46 @@ header {
             flex-basis: 50%;
         }
 
+        .primary-menu-container {
+            position       : absolute;
+            width          : 100dvw;
+            height         : 100dvh;
+            background     : transparent;
+            left           : 0;
+            top            : 0;
+            display        : none;
+            align-items    : center;
+            justify-content: center;
+            color          : white;
+            text-align     : center;
+            flex-direction : column;
+
+            ul {
+                padding: 0;
+            }
+
+            button {
+                margin-bottom: 1.25rem;
+            }
+
+            &.open {
+                display: flex;
+            }
+
+            &::after {
+                content        : '';
+                left           : 0;
+                top            : 0;
+                position       : absolute;
+                height         : 100%;
+                width          : 100%;
+                background     : #000000c7;
+                backdrop-filter: blur(5px);
+                z-index        : -1;
+                animation      : fade-in 0.5s ease forwards;
+            }
+        }
+
         .header-logo {
             display    : none;
             margin-left: 4.5rem;
@@ -526,7 +568,8 @@ header {
             }
         }
 
-        &.over-black svg {
+        &.over-black svg,
+        &.primary-menu-open svg {
             fill: var(--clr-white-000);
         }
 
@@ -534,8 +577,6 @@ header {
         &.over-gray .header-logo.black {
             display: block;
         }
-
-
 
         .navigation-options {
             align-items: center;
@@ -546,7 +587,12 @@ header {
                 cursor    : pointer;
                 width     : 30px;
                 height    : 30px;
+
+                &.open {
+                    display: none;
+                }
             }
+
         }
 
         .search-form {
@@ -1398,7 +1444,6 @@ header {
     .gallery .section-container {
         .arrows-container {
             transform      : translateX(-50%);
-            border         : 1px solid red;
             width          : 75%;
             display        : flex;
             justify-content: space-between;
@@ -1694,7 +1739,7 @@ header {
             max-width: 35ch;
         }
 
-        form {
+        form .contact-form {
             .wpcf7-form-control-wrap {
                 flex-basis: 100%;
             }
@@ -1743,5 +1788,10 @@ header {
             }
         }
     }
+}
 
+@media screen and (width<400px) {
+    header .section-container .actions {
+        display: none;
+    }
 }

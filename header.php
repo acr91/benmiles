@@ -20,7 +20,7 @@
     <header class="d-flex">
         <div class="d-flex section-container">
             <div class="d-flex navigation-options">
-                <button class="btn navigation-toggler" type="button" aria-expanded="false"
+                <button class="btn opener navigation-toggler" type="button" aria-expanded="false"
                     aria-label="Toggle navigation">
                     <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"
                         aria-hidden="true" role="img">
@@ -29,12 +29,24 @@
                         <rect x="3" y="25" width="30" height="2" rx="1"></rect>
                     </svg>
                 </button>
-                <!--<nav>
-                <ul>
-                    <li><a href="#banner">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                </ul>
-            </nav> -->
+                <div class="primary-menu-container">
+                    <button class="btn navigation-toggler" type="button" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200"
+                            role="img" aria-label="Cruz en aspa">
+                            <rect x="92" y="-20" width="16" height="240" transform="rotate(45 100 100)" rx="6" />
+                            <rect x="92" y="-20" width="16" height="240" transform="rotate(-45 100 100)" rx="6" />
+                        </svg>
+                    </button>
+                    <?php
+                    wp_nav_menu(array(
+                        'theme_location' => 'primary',
+                        'menu_class' => 'primary-menu',
+                        'container' => 'nav',
+                        'container_class' => 'primary-navigation',
+                    ));
+                    ?>
+                </div>
                 <form class="search-form" action="">
                     <input id="search" type="text" class="search-input" placeholder="Search">
                 </form>

@@ -3,10 +3,40 @@ const searchForm = document.querySelector(".search-form");
 const header = document.querySelector("header");
 const headerContainer = header.querySelector(".section-container");
 const headerLogo = document.querySelector(".header-logo");
-const menuButton = document.querySelector(".navigation-toggler");
+
+//Menu button in the header
+const navigationMenu = document.querySelector(".primary-menu-container");
+//Button to open menu in the header
+const menuButtonOpener = document.querySelector(".navigation-toggler.opener");
+//Button to close menu inside the navigation menu
+const menuButtonCloser = navigationMenu.querySelector(".navigation-toggler");
+//All primary navigation links
+const primaryNavLinks = navigationMenu.querySelectorAll("a");
 
 const INITIAL_WIDTH = 1640;
 const HEADER_HEIGHT = 90;
+
+// Open menu when clicking the menu button
+menuButtonOpener.addEventListener("click", () => {
+  headerContainer.classList.toggle("primary-menu-open");
+  navigationMenu.classList.toggle("open");
+  menuButtonOpener.classList.toggle("open");
+});
+
+// Close menu when clicking the close button
+menuButtonCloser.addEventListener("click", () => {
+  headerContainer.classList.remove("primary-menu-open");
+  navigationMenu.classList.toggle("open");
+  menuButtonOpener.classList.toggle("open");
+});
+
+// Close menu when clicking any primary navigation link
+primaryNavLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    navigationMenu.classList.toggle("open");
+    menuButtonOpener.classList.toggle("open");
+  });
+});
 
 window.addEventListener("scroll", () => {
   header.classList.toggle("scrolling", window.scrollY > 0);

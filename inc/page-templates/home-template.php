@@ -350,22 +350,22 @@ get_header(); ?>
                 <p class="viewers-info paragraph-1">3.3K listeners</p>
                 <a href="#contact-anchor" class="btn btn-tertiary">BE A GUEST</a>
                 <div class="d-flex streaming-platforms">
-                    <a href="#" class="d-flex paragraph-2 social-network-chip">
+                    <a href="#" class="d-flex paragraph-2 social-network-chip" target="_blank">
                         <img src="<?php echo site_url(); ?>/wp-content/themes/benmiles/assets/icons/icons_spotify.svg"
                             alt="Spotify">
                         Spotify
                     </a>
-                    <a href="#" class="d-flex paragraph-2 social-network-chip">
+                    <a href="#" class="d-flex paragraph-2 social-network-chip" target="_blank">
                         <img src="<?php echo site_url(); ?>/wp-content/themes/benmiles/assets/icons/icons_apple.svg"
                             alt="Apple Podcasts">
                         Apple
                     </a>
-                    <a href="#" class="d-flex paragraph-2 social-network-chip">
+                    <a href="#" class="d-flex paragraph-2 social-network-chip" target="_blank">
                         <img src="<?php echo site_url(); ?>/wp-content/themes/benmiles/assets/icons/icons_youtube.svg"
                             alt="YouTube">
                         Youtube
                     </a>
-                    <a href="#" class="d-flex paragraph-2 social-network-chip">
+                    <a href="#" class="d-flex paragraph-2 social-network-chip" target="_blank">
                         <img src="<?php echo site_url(); ?>/wp-content/themes/benmiles/assets/icons/icons_soundcloud.svg"
                             alt="SoundCloud">
                         Sound Clod

@@ -76,22 +76,22 @@
                     $twitter_url = get_theme_mod('benmiles_twitter', '#');
                     ?>
                     <?php if ($facebook_url): ?>
-                        <a href="<?php echo esc_url($facebook_url); ?>" class="icon img-icon-54"><img
+                        <a href="<?php echo esc_url($facebook_url); ?>" class="icon img-icon-54" target="_blank"><img
                                 src="<?php echo site_url(); ?>/wp-content/themes/benmiles/assets/icons/facebook.svg"
                                 alt="Facebook"></a>
                     <?php endif; ?>
                     <?php if ($spotify_url): ?>
-                        <a href="<?php echo esc_url($spotify_url); ?>" class="icon img-icon-54"><img
+                        <a href="<?php echo esc_url($spotify_url); ?>" class="icon img-icon-54" target="_blank"><img
                                 src="<?php echo site_url(); ?>/wp-content/themes/benmiles/assets/icons/spotify.svg"
                                 alt="Spotify"></a>
                     <?php endif; ?>
                     <?php if ($instagram_url): ?>
-                        <a href="<?php echo esc_url($instagram_url); ?>" class="icon img-icon-54"><img
+                        <a href="<?php echo esc_url($instagram_url); ?>" class="icon img-icon-54" target="_blank"><img
                                 src="<?php echo site_url(); ?>/wp-content/themes/benmiles/assets/icons/instagram.svg"
                                 alt="Instagram"></a>
                     <?php endif; ?>
                     <?php if ($twitter_url): ?>
-                        <a href="<?php echo esc_url($twitter_url); ?>" class="icon img-icon-54"><img
+                        <a href="<?php echo esc_url($twitter_url); ?>" class="icon img-icon-54" target="_blank"><img
                                 src="<?php echo site_url(); ?>/wp-content/themes/benmiles/assets/icons/twitter.svg"
                                 alt="Twitter"></a>
                     <?php endif; ?>

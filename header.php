@@ -60,8 +60,8 @@
                 </div>
             </div>
             <div class="d-flex actions">
-                <button class="btn btn-primary desktop">CONTACT / WORK WITH ME</button>
-                <button class="btn btn-primary mobile">CONTACT</button>
+                <a class="btn btn-primary desktop" href="#contact-anchor">CONTACT / WORK WITH ME</a>
+                <a class="btn btn-primary mobile" href="#contact-anchor">CONTACT</a>
             </div>
         </div>
     </header>

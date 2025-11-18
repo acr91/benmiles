@@ -340,7 +340,7 @@ get_header(); ?>
 <section id="latest-podcasts-anchor" class="d-flex latest-podcasts bg-black">
     <div class="d-flex section-container">
         <h2 class="heading-1">Latest Podcasts</h2>
-        <iframe src="https://www.youtube.com/embed/2EbCJgmrh8o?si=Gr0hglcFKV6dLvTT" frameborder="0"></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/PrApdLeLs_w?si=_6ZOAVD4QzEI8_Q8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         <div class="d-flex podcast-actions">
             <div class="current-video-info">
                 <h3 class="heading-2">POWER UNDER CONTROL</h3>
@@ -348,7 +348,7 @@ get_header(); ?>
             </div>
             <div class="d-flex actions-list">
                 <p class="viewers-info paragraph-1">3.3K listeners</p>
-                <a href="" class="btn btn-tertiary">BE A GUEST</a>
+                <a href="#contact-anchor" class="btn btn-tertiary">BE A GUEST</a>
                 <div class="d-flex streaming-platforms">
                     <a href="#" class="d-flex paragraph-2 social-network-chip">
                         <img src="<?php echo site_url(); ?>/wp-content/themes/benmiles/assets/icons/icons_spotify.svg"
